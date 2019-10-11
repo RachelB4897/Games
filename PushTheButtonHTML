@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="button, game, push, dontbeafool">
+    <title>Will You Push the Button?</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="headersDiv">
+      <h1 id="header"> Will You Push the Button? </h1>  
+      <p id="secondHeader"> Click the button or leave it alone? </p>
+      <p id="version">Which Edition Will You Pick?</p>
+      </div>
+      <div class="centerize">
+        <button id="fantasyButton" type="button" onclick="verFantasy()">Fantasy Edition</button>
+        <button id="pokeButton" type="button" onclick="verPoke()">Pokemon Edition</button>
+        <button id="bWBButton" type="button" onclick="verbWB()">Basic White Bitch Fall Edition</button>
+        <button id="dndButton" type="button" onclick="verDnD()"> Dungeons and Dragons Edition </button>
+      </div>
+      <div id="buttonBox">
+          <div id="buttonPicture">
+            <image id="theButton" src="theButton.gif" alt="Pushing A Button"></image>
+          </div>
+          <div id="leftBox">
+            <text id="goodSide" type="text"></text>
+          </div>
+          <div id="controlThisShit">
+          <text type="text" text-align:"center">BUT</text>
+          </div>
+          <div id="rightBox">
+            <text id="badSide" type="text"></text>
+          </div>
+      </div>
+      <div id="buttons">
+      <button id="clickButton" class="buttonClass" type="button" onclick="buttonClick()">Push the Button!</button>
+      <button id="leaveButton" class="buttonClass" type="button"onclick="buttonClick()">Leave it Alone!</button>
+      </div>
+    <script src="script.js"></script>
+  </body>
+</html>
