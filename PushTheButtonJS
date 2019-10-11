@@ -1,0 +1,177 @@
+/* Testing with array to console
+let leftTest = [
+  "Misses McTest"
+];
+let rightTest = [
+  "Mister McTest"
+];
+let test = leftTest[0];
+console.log(test);
+let test2 = rightTest[0];
+console.log(test2);
+
+// Writing to the web page testing
+const testMe = document.getElementById("goodSide");
+testMe.innerHTML = leftTest[0];  */
+
+/* Actual code -----------------------------------------------------------------------------------*/
+
+// Const vars that allow the array to post to the good side and bad side on the HTML page
+const goodStuff = document.getElementById("goodSide");
+const badStuff = document.getElementById("badSide");
+
+//Start the Fantasy Edition Arrays
+let leftFantasyArray = [
+/*0*/ "Any creature from fantasy can be summoned to the real world and is your loyal companion,",
+/*1*/ "There actually is a pot of gold at the other end of the rainbow,",
+/*2*/ "Magic is real and can be used solely by you,",
+/*3*/ "You have time-travelling powers,",
+/*4*/ "You have the ability to travel to any place you've read, seen or dreamed,",
+/*5*/ "You can shapeshift into any creature you could ever imagine,"
+];
+// Troubleshooting
+// console.log(leftFantasyArray[0]);
+
+let rightFantasyArray = [
+/*0*/ "your companion is so loyal it will kill anyone who has any inkling of an interest in you.",
+/*1*/ "the leprechaun is homocidal and is going to hunt you down until either one of you dies.",
+/*2*/ "anytime you use it, it shortens your life span by an indetermined amount.",
+/*3*/ "anything you touch sends ripples through time and threatens the fabric of existence.",
+/*4*/ "you will continually be hunted when you are not on your home plane.",
+/*5*/ "people will always know it's you."
+]; 
+function verFantasy(){
+  let i = 0;
+  document.getElementById("version").innerHTML = "Fantasy Edition";
+  document.getElementById("clickButton").onclick = function(){indexMove()};
+  document.getElementById("leaveButton").onclick = function(){indexMove()};
+  function indexMove(){
+      if(i < leftFantasyArray.length && i < rightFantasyArray.length){
+    goodStuff.innerHTML = leftFantasyArray[i];
+    badStuff.innerHTML = rightFantasyArray[i];
+    i++;
+    }
+  }
+}
+// Troubleshooting
+// console.log(rightFantasyArray[0]);
+
+
+// Start the Pokemon Edition Arrays
+let leftPokeArray = [
+/*0*/ "You have a level 99 of every pokemon, including all rares, legendaries and shinies,",
+/*1*/ "You are the champion of all regions without a doubt and never lose a match,",
+/*2*/ "Jirachi is your best buddy and you are allowed to make any wish that you could ever dream of,",
+/*3*/ "Your Eevee is able to freely change between all of its evolutions without stones, love or friendship,",
+/*4*/ "Splash does obscene damage to anything you use it on,",
+/*5*/ "Pokemon can be summoned in the real world,"
+];
+
+let rightPokeArray = [
+/*0*/ "they only listen to you about half of the time.",
+/*1*/ "other trainers CONSTANTLY are wanting to battle you at all times of the day, even while sleeping, going to the bathroom and having breakfast.",
+/*2*/ "if you aren't down-to-the-detail specific about your wish, things seem to go terribly, terribly wrong.",
+/*3*/ "their evolution mixset is always wrought with random abilities and every form knows Double Kick and really likes to use it.",
+/*4*/ "Magickarp will never evolve into Gyarados again.",
+/*5*/ "there will always be war because people will abuse the power of their Pokemon."
+]; 
+
+// To assure that only Pokemon Edition is running.
+function verPoke(){
+  let i = 0;
+  document.getElementById("version").innerHTML = "Pokemon Edition";
+  document.getElementById("clickButton").onclick = function(){indexMove()};
+  document.getElementById("leaveButton").onclick = function(){indexMove()};
+  function indexMove(){
+      if(i < leftPokeArray.length && i < rightPokeArray.length){
+    goodStuff.innerHTML = leftPokeArray[i];
+    badStuff.innerHTML = rightPokeArray[i];
+    i++;
+    }
+  }
+}
+/* Used to troubleshoot having several different game versions
+function verbWB(){
+  console.log("Test with pumpkin spice and yoga pants.");
+  document.getElementById("clickButton").onclick = function(){myFunc()};
+    function myFunc(){
+    console.log("Overwriting test with a frappe, two-times to tuesday, dressed sharply, on fleck, topped with whipped cream and cocoa powder.");
+  }
+}
+*/
+
+// Start the Basic White Bitch Fall Edition Arrays
+let basicBitchLeftArray = [
+/*0*/ "Starbucks is free no matter the drink, size or additions,",
+/*1*/ "Pumpkin spice, omg pumpkin spice, pumpkin spice, pumpkinspice, PUMPKIN SPICE,",
+/*2*/ "All the accessories are yours, scarves, yoga pants, Tieks, Starbucks,",
+/*3*/ "The Starbucks crew will always bring you coffee every shift you all work together (BESTIES),",
+/*4*/ "Yoga pants look good on everyone,",
+/*5*/ "OMG I LOVE FALL,"
+];
+
+let basicBitchRightArray = [
+/*0*/ "you can't drink it.",
+/*1*/ "yoga pants don't exist.",
+/*2*/ "they only come in orange.",
+/*3*/ "your crew doesn't secretly hate you like most crews, they hate you to your face.",
+/*4*/ "they don't really, you're not foolin' anyone.",
+/*5*/ "PUMPKIN SPICE IS EVERYWHERE *runs screaming*."
+];
+// To assure that only the Basic Bitch Edition is running through the index.
+function verbWB(){
+  let i = 0;
+  document.getElementById("version").innerHTML = "Basic White Bitch Fall Edition";
+  document.getElementById("clickButton").onclick = function(){indexMove()};
+  document.getElementById("leaveButton").onclick = function(){indexMove()};
+  function indexMove(){
+      if(i < basicBitchLeftArray.length && i < basicBitchRightArray.length){
+    goodStuff.innerHTML = basicBitchLeftArray[i];
+    badStuff.innerHTML = basicBitchRightArray[i];
+    i++;
+    }
+  }
+}
+
+// D&D Edition Arrays
+let verDnDLeftArray = [
+/*0*/ "You can have a keen, vorpal sword throughout the campaign from beginning to end,",
+/*1*/ "You are a holy and righteous paladin, chastising all they who defy the goodness in the world, bow in your hand for smiting prowess,",
+/*2*/ "You are a bard who has epic level abilities and been through many a campaign,",
+/*3*/ "The DM tells you that you can play a monk,",
+/*4*/ "You are playing a wizard with a perfect spellbook,",
+/*5*/ "You are allowed to play an exceedingly knowledgable Loremaster who has the answer to ANY question with max knowledges,"
+];
+
+let verDnDRightArray = [
+/*0*/ "this is the only weapon you can use and the final boss is a lich.",
+/*1*/ "your God has declared that you are to be the guardian of a group of adventurers who are all chaotic evil, and you are not allowed to kill or impede them in any fashion.",
+/*2*/ "you are stricken with permenant mute and every instrument that touches your hands breaks after one use.",
+/*3*/ "all enemies you face have high blunt resistance and high magic resistance, and you are not permitted to wield a weapon.",
+/*4*/ "every spell you read from the book erases itself from the book after one use.",
+/*5*/ "all of your knowledge is from another universe where things work differently from here."
+];
+// To ensure that only DnD Version runs when clicking buttons
+function verDnD(){
+  let i = 0;
+  document.getElementById("version").innerHTML = "Dungeons and Dragons Edition";
+  document.getElementById("clickButton").onclick = function(){indexMove()};
+  document.getElementById("leaveButton").onclick = function(){indexMove()};
+  function indexMove(){
+      if(i < verDnDLeftArray.length && i < verDnDRightArray.length){
+    goodStuff.innerHTML = verDnDLeftArray[i];
+    badStuff.innerHTML = verDnDRightArray[i];
+    i++;
+    }
+  }
+}
+
+// Checks to see if array has reached its length or conclusion. If not, keep cycling through the index until you have, then stop.  
+let i = 0;
+function buttonClick(){
+  if(i < leftFantasyArray.length && i < rightFantasyArray.length){
+    goodStuff.innerHTML = leftFantasyArray[i];
+    badStuff.innerHTML = rightFantasyArray[i];
+    i++;
+  }
+}
