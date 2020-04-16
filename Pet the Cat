@@ -1,0 +1,196 @@
+using System;
+
+class MainClass {
+
+  string pickedCat, pickExoticCat, petMaineCoon, petPersian, petSavannah, varShort, petAbyssinian, petMau, petScotFold;
+  bool maineCoonPicked, persianPicked, savannahPicked, shorthairPicked = false;
+
+  public void pickCat(){
+      Console.WriteLine(""); 
+      Console.WriteLine("Which cat would you like to pet today?");
+      Console.WriteLine("");
+      Console.WriteLine("Maine Coon");
+      Console.WriteLine("Persian");
+      Console.WriteLine("Savannah");
+      Console.WriteLine("Domestic Shorthair");
+      Console.Write("I want to pet... ");
+      pickedCat = Console.ReadLine();
+
+    switch(pickedCat){
+        case "Maine Coon":
+          pickedMaineCoon();
+          break;
+        case "Persian":
+          pickedPersian();
+          break;
+        case "Savannah":
+          pickedSavannah();
+          break;
+        case "Domestic Shorthair":
+          pickedShorthair();
+          break;
+        default:
+          Console.WriteLine("Please pick a cat to pet!");
+          Console.WriteLine("");
+          pickCat();
+          break;
+    }
+  }
+
+  public void pickedMaineCoon(){
+    Console.WriteLine("Ah! A fan of big cats are you? Maine Coons are well-known for their size and also for their lovable personalities! They are often tenderly playful and curious, making them kitten-like throughout their lives. How sweet ~");
+    Console.Write("Would you like to pet the Maine Coon? Y/N - ");
+    petMaineCoon = Console.ReadLine();
+      if (petMaineCoon == "Y"|| petMaineCoon == "y"){
+        Console.WriteLine("That is so incredibly nice of you. Even though Maine Coons are a popular breed due to their unique size and their loveable personalities, many are still left in shelters who need your love and help. Please consider fostering or adopting today!");
+        Console.WriteLine("");  
+        maineCoonPicked = true;    
+    } else {
+      Console.WriteLine("The Maine Coon isn't for you? Well, that's okay! To each their own. I'll love on this little sweetie while we head back and see who you else might catch your attention instead.");
+      Console.WriteLine("");
+    }  
+  }
+  public void pickedPersian(){
+    Console.Write("Oh, more of a fan of the royal, fluffy-looking cats are you? Actually, Persians originally were a shiny, grey in colour, but nowadays they come in seven different coloured coats - mostly for competition and division purposes. Despite having a higher risk of health issues due to their facial structure and long hair, Persians are well-known for their beauty and regality.");
+    Console.Write("Do you want to pet the Persian? Y/N - ");
+    petPersian = Console.ReadLine();
+
+    if (petPersian == "Y"){
+      Console.WriteLine("Ah, got a little fur on your hands did you? That's okay! Persians are known to shed if they are not groomed every day and bathed monthly! Still, a beautiful and happy cat is definitely worth every ounce of effort! If you can take time for yourself, you can take time for the animal you've chosen to care and love the rest of its life! Please consider fostering or adoption today!");
+      Console.WriteLine("");
+      persianPicked = true;
+    } else {
+      Console.WriteLine("Did I scare you away from this beautiful, fluffy cat? Well, I'll just brush it on the way back to start!");
+      Console.WriteLine("");
+    }
+  }
+  public void pickedSavannah(){
+    Console.WriteLine("Looking for a companion who is playful, adventurous and loyal? Savannahs are well-known for loving to play in water and their ability to learn how to walk on a leash. Despite being dog-like, it isn't! They have strong hunting instincts and if there are little critters or pets in your house, they may not be safe with a Savannah. Still, they are great family cats and even get along with dogs!");
+    Console.Write("Do you want to pet the Savannah? Y/N - ");
+    petSavannah = Console.ReadLine();
+
+      if(petSavannah == "Y"){
+        Console.WriteLine("Although later generations of the breed are similar in weight to other breeds, they appear larger due to their height. Savannah Cats are characterized by their long, slender necks, triangular heads and large, wide ears that sit on top of their heads. They also have longer-than-average legs. Please consider adoption over purchasing from a breeder! There are cats out there that need your love!");
+        Console.WriteLine("");
+        savannahPicked = true;
+      } else{
+        Console.WriteLine("How can you not want to pet this beauty? Alas, I shall have to do it while we look for a cat you'll like.");
+        Console.WriteLine("");
+      }
+  }
+  public void pickedShorthair(){
+    Console.WriteLine("Domestic shorthairs are the most frequently common breed of cat. You could even say that they are what dog-lovers would call a 'mutt'. Which colour shorthair would you like to pet today?");
+    Console.Write("Black|Tabby|Striped: ");
+      varShort = Console.ReadLine();
+      switch(varShort){
+        case "Black":
+          Console.WriteLine("Forget the stereotypical depiction of the perpetually single cat lady. In some parts of the world, it’s believed that black cats can actually improve your love life. In Japan, for example, single women who own black cats are believed to attract more suitors. In Great Britain’s English Midlands, a black cat is the ideal wedding gift; they’re believed to bring good luck and happiness to the bride.");
+          shorthairPicked = true;
+          Console.WriteLine("");
+          break;
+        case "Tabby":
+          Console.WriteLine("Formerly used to keep rodents and vermin away from food stores, the American Shorthair still enjoys exercising her hunting skills on unsuspecting insects. As a smart, moderately active feline, she enjoys learning tricks and challenging her intelligence with puzzles and interactive toys.");
+          shorthairPicked = true;
+          Console.WriteLine("");
+          break;
+        case "Striped":
+          Console.WriteLine("The Domestic shorthair comes in a wide array of colors, sizes, and statures, though they tend to be medium-sized and muscular. They have short, sleek coats and round heads and paws. Because of their mixed parentage, Domestic Shorthairs don't tend to be at-risk for any unusual health complications.");
+          shorthairPicked = true;
+          Console.WriteLine("");
+          break;
+        default:
+          Console.WriteLine("Does nothing satisfy you? Fine, I'll take these beauties with me and we'll find SOMEONE for you to love!");
+          Console.WriteLine("");
+          break;
+      }
+  }
+    
+    public void exoticCats(){
+    Console.ForegroundColor = ConsoleColor.DarkYellow;
+    Console.WriteLine("You have loved every cat without hesitation, and therefore have unlocked Exotic Cat Mode! Congratulations! Please pick from our list of highly exotic cats below.");
+    Console.WriteLine("");
+    Console.WriteLine("Abyssinian");
+    Console.WriteLine("Egyptian Mau");
+    Console.WriteLine("Scottish Fold");
+    Console.Write("Which cat do you want to pet:");
+    pickExoticCat = Console.ReadLine();
+
+    switch(pickExoticCat){
+      case "Abyssinian":
+      pickedAbyssinian();
+      break;
+      case "Egyptian Mau":
+      pickedMau();
+      break;
+      case "Scottish Fold":
+      pickedScotFold();
+      break;
+      default:
+      Console.WriteLine("Maybe I misheard you? Please try again!");
+      break;
+    }
+  }
+    public void pickedAbyssinian(){
+      Console.WriteLine("*****************************************************************");
+        Console.WriteLine("The exotic-looking, lithe Abyssinian sports a wedge-shape head, large at-alert ears, and gold or green luminous, almond-shape eyes. Slender and muscular, this cat has a short, dense coat that ranges from brown, black, silver, or cream. A long-haired version called a Somali is also popular. The Abyssinian is active and often paces back and forth like a miniature cougar. It requires lots of exercise and attention. Curious and smart, it's a loving companion.");
+      Console.WriteLine("*****************************************************************");
+      Console.Write("Pet the Abyssinian kitty?");
+      petAbyssinian = Console.ReadLine();
+        if(petAbyssinian == "Y"){
+          Console.WriteLine("*****************************************************************");
+          Console.WriteLine("Abyssinians are highly intelligent and intensely inquisitive. They love to investigate and will leave no nook or cranny unexplored. They’re sometimes referred to as “Aby-grabbys” because they tend to take things that grab their interest. The playful Aby loves to jump and climb. Keep a variety of toys on hand to keep her occupied, including puzzle toys that challenge her intelligence. Consider adoption today!");
+          Console.WriteLine("*****************************************************************");
+        } else {
+          Console.WriteLine("*****************************************************************");
+          Console.WriteLine("Okay, maybe a different cat! Let's go back to look! In the meantime I'll take care of this little sweetheart.");
+          Console.WriteLine("*****************************************************************");
+      }
+    }
+    public void pickedMau(){
+      Console.WriteLine("*****************************************************************");
+      Console.WriteLine("Did you know Egyptian Maus are considered one of the progenitor breeds of the modern domestic cat. The breed conformation is described as a balance between the compactness of a Burmese and the slim elegance of a Siamese. Its medium-length body is muscular, with the hind legs longer than the front, giving the Mau the appearance of standing on tiptoes when upright.");
+      Console.WriteLine("*****************************************************************");
+      Console.Write("Pet the Egyptian Mau? Y/N - ");
+      petMau = Console.ReadLine();
+        if(petMau == "Y"){
+          Console.WriteLine("*****************************************************************");
+          Console.WriteLine("While some people might at first be attracted to the Egyptian Mau’s beautiful spotted coat, most become fans due to the breed’s temperament and personality. Maus, like their ancestors that were invited along on the duck hunts of their Egyptian companions, love to fetch. In fact, they love any play activity that mimics hunting behavior. Indoor-only Maus, the only kind recommended by most enthusiasts, will sometimes leave gifts of well-killed catnip mice on the pillows of their favorite people. While not overly talkative, Maus will let their humans know if something is amiss, particularly if that something concerns food dishes. Their voices are usually melodious and quiet. When engaged in conversation with their human companions, Maus wag their tails, tread with their feet, and make a variety of sounds that fanciers call “chortling.” Maus are devoted to the humans who pay them the proper homage. If you show your Mau you can be trusted, your Mau will shower you with love and loyalty. Consider adoption over purchasing from a breeder!");
+          Console.WriteLine("*****************************************************************");
+        } else {
+          Console.WriteLine("*****************************************************************");
+          Console.WriteLine("How can you resist this slender beauty?? Ah.. more snuggles for me..*");
+          Console.WriteLine("*****************************************************************");
+        }
+    }
+    public void pickedScotFold(){
+      Console.WriteLine("*****************************************************************");
+      Console.WriteLine("The Scottish Fold is a breed of domestic cat with a natural dominant-gene mutation that affects cartilage throughout the body, causing the ears to fold, bending forward and down towards the front of the head, which gives the cat what is often described as an owl-like appearance.Originally called lop-eared or lops after the lop-eared rabbit, Scottish Fold became the breed's name in 1966. Depending on registries, longhaired Scottish Folds are varyingly known as Highland Fold, Scottish Fold Longhair, Longhair Fold and Coupari.");
+      Console.WriteLine("*****************************************************************");
+      Console.Write("Pet the Scottish Fold? Y/N - ");
+      petScotFold = Console.ReadLine();
+      if(petScotFold == "Y"){
+        Console.WriteLine("*****************************************************************");
+        Console.WriteLine("The breed's distinctive folded ears are produced by an incompletely dominant gene that affects the cartilage of the ears, causing the ears to fold forward and downward, giving a cap-like appearance to the head. Smaller, tightly folded ears set in a cap-like fashion are preferred to a loose fold and larger ear. The large, round eyes and rounded head, cheeks, and whisker pads add to the overall rounded appearance. Despite the folded ears, folds still use their aural appendages to express themselves—the ears swivel to listen, lie back in anger and prick up when the treat bag rustles. Consider adoption over purchasing from a breeder!");
+        Console.WriteLine("*****************************************************************");
+      } else {
+        Console.WriteLine("*****************************************************************");
+        Console.WriteLine("Wha? This little adorable baby, how can you resist?? More for me I guess..");
+        Console.WriteLine("*****************************************************************");
+      }
+    }
+
+  public static void Main (string[] args) {
+    Console.ForegroundColor = ConsoleColor.DarkCyan;
+    Console.WriteLine("Hello and welcome to the all-new, virtual, text-based adventure of Pet the Cat. So exciting, so THRILLING. You want to pet the cat don't you? Isn't that why you came? Obviously, crazy cat-person you are shaping up to be. Let's get started.");
+    Console.WriteLine("Ohhh and one little note. Currently the game is character and case-sensative. Be nyahrned!");
+    MainClass newGame = new MainClass();
+
+    do {
+      newGame.pickCat();
+    }while (newGame.maineCoonPicked == false || newGame.shorthairPicked == false || newGame.persianPicked == false || newGame.savannahPicked == false); 
+    
+    while(newGame.maineCoonPicked == true && newGame.shorthairPicked == true && newGame.persianPicked == true && newGame.savannahPicked == true){
+      newGame.exoticCats();
+    }
+  }
+}
